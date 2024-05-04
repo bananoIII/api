@@ -1,11 +1,15 @@
 const {Pool} = require('pg')
 
 const pool = new Pool({
-    host: 'localhost',
-    user:'postgres',
-    password: '1234',
-    database: 'node',
-    port: '5432'
+    host: 'dpg-coqsaoq0si5c7397sas0-a.virginia-postgres.render.com',
+    user:'banano',
+    password: 'gRVazgauWZmW0kwf9neG1MwG4NOEP79Z',
+    database: 'node_otve',
+    port: '5432',
+    ssl: {
+        rejectUnauthorized: false // Opcional, dependiendo de tu configuración de SSL/TLS
+    }
+
 })
 
 const getUsers = async (req,res) =>{
